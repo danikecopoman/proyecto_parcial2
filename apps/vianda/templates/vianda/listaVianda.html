@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% block titulo %} Lista de vianda {% endblock %}
+{% block contenido %}
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Frecuencia</th>
+                <th>Tipo de Menú</th>
+                <th>Fecha de Inicio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for v in vianda %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{v.frecuencia}}</td>
+                <td>{{v.tipo_menu}}</td>
+                <td>{{v.fecha_vianda}}</td>
+                <td>{{v.cantidad}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

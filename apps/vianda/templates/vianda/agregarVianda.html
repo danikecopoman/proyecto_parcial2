@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %}
+{% block titulo %} Registro de vianda {% endblock %}
+{% block contenido %}
+
+        <div>
+        <form action="#" method="post">{% csrf_token %}
+            <fieldset>
+                <legend>Registro de Vianda</legend>
+                {{form.error}}
+                {{vianda_form.error}}
+
+                <div>
+                    <label for="frecuencia">Frecuencia:</label><br>
+                    {{vianda_form.frecuencia}} 
+                </div><br><br>
+
+                <div>
+                    <label for="tipo_menu">Tipo de Menú:</label><br>
+                    {{vianda_form.tipo_menu}} 
+                </div><br><br>
+
+                <div>
+                    <label for="fecha_vianda">Fecha de contratación:</label><br>
+                    {{vianda_form.fecha_vianda}} 
+                </div><br><br>
+
+                <div>
+                    <label for="cantidad">Cantidad:</label><br>
+                    {{vianda_form.cantidad}} 
+                </div><br><br>
+
+                <div>
+                    <label for="estado">Estado de la vianda:</label><br>
+                    {{vianda_form.estado}} 
+                </div><br><br>
+
+                <div>
+                    <label for="Tipo_plato">Tipo de Plato:</label><br>
+                    {{vianda_form.tipo_plato}} 
+                </div><br><br>
+
+                <div>
+                    {{vianda_form.user}}
+                </div><br><br>
+
+                <div>
+                    <button class="btn btn-success" type="submit">Guardar</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+{% endblock %}
